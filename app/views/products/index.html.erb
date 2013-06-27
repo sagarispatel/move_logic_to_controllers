@@ -5,7 +5,10 @@
   <% @products.each do |product| %>
     <li>
       Product Name: "<%= product.name %>" costs $<%= product.price %>  |  
-	  Sold by <%= product.user.name if product.user.present? %>    
+	  Sold by <%= product.user.name if product.user.present? %>
+	  <%= link_to 'Destroy', product, method: 'delete', data: { confirm: 'Are you sure?' } %>    
     </li>
   <% end %>
 </ul>
+
+
