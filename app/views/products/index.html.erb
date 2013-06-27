@@ -1,5 +1,5 @@
 <h2> Products in the market </h2>
-<% lots_of_products = Product.includes(:user).all %>
+<% @products = Product.includes(:user).all %>
 
 <ul>
   <% @products.each do |product| %>
